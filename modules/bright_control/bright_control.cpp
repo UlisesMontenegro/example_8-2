@@ -1,3 +1,18 @@
+/*
+   Pines de placa NUCLEO asociados al RGB LED: PB_4(PWM3/1), PA_0(PWM4/1), y PD_12(PWM2/1).
+    
+    Este archivo de codigo modifica la intensidad de los 3 leds del LED RGB (Red, Green and Blue) para
+    obtener así distintas combinaciones logrando diferentes colores. Esto se logra mediante el uso de
+    señales PWM generadas a partir de la clase PWMOut. Modificando el Duty Cycle de las señales PWM se 
+    logran diferentes intensidades (cuanto mayores el tiempo en ON del PWM, entonces mayor será el brillo 
+    en el led). En este ejemplo se hace mas sencilla y clara la implementacion que en el example_8-1.
+    
+    Arbol de funciones:
+    brightControlInit()
+        |- setPeriod()
+        |- setDutyCycle()
+   */
+
 //=====[Libraries]=============================================================
 
 #include "arm_book_lib.h"
